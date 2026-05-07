@@ -1,0 +1,166 @@
+
+
+.navbar{
+    background-color: #c6c190;
+}
+#marka{
+
+  font-family: "Playfair Display", serif; /* şimdilik sadece marka başlığına font family verdim*/
+}
+
+
+
+.accordion-body{
+
+  background-color: rgb(242, 243, 246);  /* accordion kapanmıyor tıklayınca ona bakacam */
+}
+
+.slider-section {
+  background-color:rgb(255, 255, 255);
+  padding-bottom: 100px;
+}
+
+#carouselExampleCaptions{
+  max-width: 800px;
+  margin:auto;
+
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  object-position: left center; 
+  border-radius: 20px;
+}
+
+.carousel-caption {
+  background: rgba(0,0,0,0.4);
+  padding: 15px;
+  border-radius: 20px;
+  opacity:100%;
+}
+
+.carousel-caption a{
+
+  color:white;
+  text-decoration: none;  /*  linlerdeki alt çizgiyi kaldırdık */
+}
+
+
+.carousel { 
+  max-width:1000px;
+  margin: 20px auto;          /* slidera golge ver kart sekli vermek için (dliderın cevrsini değiştiremedim ona bak */
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow:30px 30px 80px rgba(0, 0, 0, 0.12);
+  
+}
+
+
+/* yan okları prev next icon rengini ayarlamayı öğren */
+.card:hover {
+  transform: scale(1.1); /*büyüme oranı */
+  transition: 0.2s;  /* geçiş yumuşaklığı*/
+}
+
+.whatsapp-btn {  /* css yazmasaydık a nın içine ikon koydugumuz için direkt en alta icon gelirdi link özelliğiyle */
+  position: fixed;
+  bottom: 30px;
+  left: 30px;  /* right yapsak sagdan kac bosluk var onu ayarlaruz*/
+  background-color: #25D366;
+  color: white;
+  font-size: 35px;
+  padding: 15px;
+  border-radius: 38%;
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);  
+}
+
+.whatsapp-btn:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+
+
+
+/* form bolumu */
+form{
+
+  background-color: rgb(224, 224, 216);
+ border-radius: 90px;
+
+ 
+}
+
+.form-label{
+  color: rgb(21, 21, 0);
+}
+
+/* form akan başlık bölümü*/
+.kayan-yazı{
+  width: 100%;
+  overflow: hidden;
+  background: #f8f9fa;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.kayan-yazı p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: kaydir 8s linear infinite;
+  font-weight: bolder;
+  color: black;
+
+}
+
+@keyframes kaydir {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* -100% → kendi genişliği kadar sola gider
+100% → kendi genişliği kadar sağa gider*/
+
+/* eğitmenler */
+.teachers {
+  background: #93a915;
+  color: white;
+}
+
+.teacher-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+small {
+  color: rgba(255,255,255,0.6);
+}
+
+
+#imageOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#overlayImg {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+
+/* butona basınca renginin değişmesini ayarlayamadım ona bak */

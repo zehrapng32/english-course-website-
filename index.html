@@ -1,0 +1,1117 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinguaEdge — İngilizce Dil Kursu</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #1a1a2e;
+    --ink-soft: #4a4a6a;
+    --cream: #faf8f3;
+    --warm: #f4efe4;
+    --accent: #d4622a;
+    --accent-light: #f0e8df;
+    --gold: #c9952a;
+    --teal: #1e7a6e;
+    --teal-light: #e0f2ef;
+    --white: #ffffff;
+    --border: rgba(26,26,46,0.1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(250,248,243,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .logo span { color: var(--accent); }
+
+  nav ul {
+    list-style: none;
+    display: flex; gap: 2.5rem;
+    align-items: center;
+  }
+
+  nav ul a {
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  nav ul a:hover { color: var(--ink); }
+
+  .nav-cta {
+    background: var(--ink) !important;
+    color: var(--cream) !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    transition: background 0.2s, transform 0.15s !important;
+  }
+
+  .nav-cta:hover { background: var(--accent) !important; transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 8rem 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: 
+      radial-gradient(ellipse 60% 50% at 70% 50%, #e8f5f2 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, #f5e8d8 0%, transparent 50%);
+  }
+
+  .hero-content {
+    position: relative; z-index: 1;
+    max-width: 700px;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--teal-light);
+    color: var(--teal);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.8rem;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex; gap: 1rem; align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(212,98,42,0.3);
+  }
+
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,98,42,0.4); }
+
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.9rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .btn-ghost:hover { background: var(--warm); border-color: var(--ink-soft); }
+
+  .hero-stats {
+    position: absolute; right: 4rem; top: 50%;
+    transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 1.5rem;
+    z-index: 1;
+  }
+
+  .stat-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(26,26,46,0.06);
+    min-width: 160px;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .stat-card:nth-child(2) { animation-delay: -2s; }
+  .stat-card:nth-child(3) { animation-delay: -1s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  /* SECTION */
+  section {
+    padding: 6rem 4rem;
+  }
+
+  .section-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.2rem;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    max-width: 520px;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* PROGRAMS (merged levels + courses) */
+  .programs {
+    background: var(--ink);
+    color: white;
+  }
+
+  .programs .section-title { color: white; }
+  .programs .section-sub { color: rgba(255,255,255,0.55); }
+  .programs .section-tag { color: var(--gold); }
+
+  .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .program-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: background 0.25s, transform 0.2s;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .program-card:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-3px);
+  }
+
+  .program-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+
+  .program-card:hover::before { opacity: 1; }
+
+  .pc-green::before { background: linear-gradient(90deg, #1e7a6e, #2aa89a); }
+  .pc-orange::before { background: linear-gradient(90deg, #d4622a, #e88a5a); }
+  .pc-blue::before { background: linear-gradient(90deg, #1e4fa0, #4a80e0); }
+  .pc-purple::before { background: linear-gradient(90deg, #5b30b8, #8a60e0); }
+  .pc-gold::before { background: linear-gradient(90deg, #c9952a, #e0b85a); }
+
+  .program-header {
+    padding: 1.8rem 1.8rem 1.2rem;
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .program-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  .pi-green { background: rgba(30,122,110,0.25); }
+  .pi-orange { background: rgba(212,98,42,0.25); }
+  .pi-blue { background: rgba(30,79,160,0.25); }
+  .pi-purple { background: rgba(91,48,184,0.25); }
+  .pi-gold { background: rgba(201,149,42,0.25); }
+
+  .program-level-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+
+  .plb-green { background: rgba(30,122,110,0.25); color: #5acabb; }
+  .plb-orange { background: rgba(212,98,42,0.25); color: #f0975a; }
+  .plb-blue { background: rgba(30,79,160,0.25); color: #7aaaf0; }
+  .plb-purple { background: rgba(91,48,184,0.25); color: #b08af0; }
+  .plb-gold { background: rgba(201,149,42,0.25); color: #e0c070; }
+
+  .program-body { padding: 0 1.8rem 1.8rem; }
+
+  .program-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.35rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .program-desc {
+    font-size: 0.84rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 1.2rem;
+  }
+
+  .program-meta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 1.4rem;
+  }
+
+  .program-meta span { display: flex; align-items: center; gap: 0.3rem; }
+
+  .program-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .program-price-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: white;
+  }
+
+  .program-price-note {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    margin-top: 0.1rem;
+  }
+
+  .btn-enroll-dark {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .btn-enroll-dark:hover { background: var(--accent); border-color: var(--accent); }
+
+  /* OLD LEVELS (kept for reference, unused) */
+  .levels {
+    background: var(--ink);
+    color: white;
+  }
+
+  .levels .section-title { color: white; }
+  .levels .section-sub { color: rgba(255,255,255,0.55); }
+  .levels .section-tag { color: var(--gold); }
+
+  .levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5px;
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+
+  .level-card {
+    background: var(--ink);
+    padding: 2rem 1.8rem;
+    transition: background 0.25s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .level-card:hover { background: #252545; }
+
+  .level-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .level-card:hover::before { transform: scaleX(1); }
+
+  .level-code {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  .level-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.8rem;
+  }
+
+  .level-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* COURSES */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .course-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(26,26,46,0.1);
+  }
+
+  .course-thumb {
+    height: 160px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4rem;
+    position: relative;
+  }
+
+  .course-thumb.green { background: var(--teal-light); }
+  .course-thumb.orange { background: #fbeee4; }
+  .course-thumb.blue { background: #e4ecfb; }
+  .course-thumb.purple { background: #ede4fb; }
+
+  .course-body { padding: 1.5rem; }
+
+  .course-level {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+  }
+
+  .tag-beg { background: var(--teal-light); color: var(--teal); }
+  .tag-int { background: #fbeee4; color: #b85020; }
+  .tag-adv { background: #ede4fb; color: #5b30b8; }
+  .tag-bus { background: #e4ecfb; color: #1e4fa0; }
+
+  .course-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .course-info {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    display: flex; gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .course-info span { display: flex; align-items: center; gap: 0.3rem; }
+
+  .course-price {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .price-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+  }
+
+  .price-note { font-size: 0.78rem; color: var(--ink-soft); }
+
+  .btn-enroll {
+    display: inline-block;
+    background: var(--ink);
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .btn-enroll:hover { background: var(--accent); }
+
+  /* TEACHERS */
+  .teachers { background: var(--warm); }
+
+  .teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .teacher-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+  }
+
+  .teacher-card:hover { transform: translateY(-3px); }
+
+  .teacher-avatar {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .av-teal { background: linear-gradient(135deg, #1e7a6e, #2aa89a); }
+  .av-orange { background: linear-gradient(135deg, #d4622a, #e88a5a); }
+  .av-purple { background: linear-gradient(135deg, #5b30b8, #8a60e0); }
+  .av-gold { background: linear-gradient(135deg, #c9952a, #e0b85a); }
+
+  .teacher-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .teacher-role {
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  .teacher-bio {
+    font-size: 0.83rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .testimonial {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+  }
+
+  .stars { color: var(--gold); margin-bottom: 1rem; font-size: 0.9rem; letter-spacing: 2px; }
+
+  .testimonial-text {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-author {
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+
+  .author-dot {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .author-name { font-size: 0.9rem; font-weight: 600; }
+  .author-info { font-size: 0.78rem; color: var(--ink-soft); }
+
+  /* FAQ */
+  .faq { background: var(--warm); }
+
+  .faq-list { max-width: 720px; margin-top: 3rem; }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 0;
+    cursor: pointer;
+  }
+
+  .faq-q {
+    display: flex; align-items: center; justify-content: space-between;
+    font-weight: 600;
+    font-size: 1rem;
+    gap: 1rem;
+  }
+
+  .faq-icon {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    font-weight: 700;
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  .faq-a {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s;
+    font-weight: 300;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 200px;
+    margin-top: 1rem;
+  }
+
+  /* CTA BANNER */
+  .cta-banner {
+    background: var(--ink);
+    color: white;
+    text-align: center;
+    padding: 6rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 50% 80% at 20% 50%, rgba(212,98,42,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 80% 50%, rgba(30,122,110,0.15) 0%, transparent 60%);
+    z-index: 0;
+  }
+
+  .cta-banner > * { position: relative; z-index: 1; }
+
+  .cta-banner .section-title { color: white; max-width: 600px; margin: 0 auto 1rem; }
+  .cta-banner .section-sub { color: rgba(255,255,255,0.5); margin: 0 auto 2.5rem; }
+
+  .cta-banner .btn-primary {
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.4);
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  footer .logo { color: white; font-size: 1.3rem; }
+
+  .footer-links {
+    display: flex; gap: 2rem;
+    font-size: 0.82rem;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: white; }
+
+  /* ANIMATIONS */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    nav ul { display: none; }
+    .hero { padding: 6rem 1.5rem 3rem; }
+    .hero-stats { display: none; }
+    section { padding: 4rem 1.5rem; }
+    .cta-banner { padding: 4rem 1.5rem; }
+    footer { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Lingua<span>Edge</span></a>
+  <ul>
+    <li><a href="#courses">Programlar</a></li>
+    <li><a href="#teachers">Eğitmenler</a></li>
+    <li><a href="#faq">SSS</a></li>
+    <li><a href="#enroll" class="nav-cta">Kayıt Ol</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content fade-up visible">
+    <div class="hero-badge">Türkiye'nin Önde Gelen Dil Okulu</div>
+    <h1>İngilizceni<br><em>Mükemmel</em><br>Konuş.</h1>
+    <p class="hero-sub">
+      Uzman eğitmenler, kişiselleştirilmiş müfredat ve
+      kanıtlanmış metodoloji ile ingilizce öğrenmeyi
+      yeniden keşfet.
+    </p>
+    <div class="hero-actions">
+      <a href="#enroll" class="btn-primary">Ücretsiz Deneme Dersi →</a>
+      <a href="#courses" class="btn-ghost">▶ Programları Keşfet</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-num">3.200+</div>
+      <div class="stat-label">Mezun Öğrenci</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">98%</div>
+      <div class="stat-label">Başarı Oranı</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">12+</div>
+      <div class="stat-label">Yıllık Deneyim</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS (merged levels + courses) -->
+<section class="programs" id="courses">
+  <div class="section-tag">Programlar</div>
+  <h2 class="section-title">Seviyene uygun<br>doğru program.</h2>
+  <p class="section-sub">A1'den ileri seviyeye, iş ingilizcesinden sınav hazırlığına — her hedefe özel yapılandırılmış kurslar.</p>
+
+  <div class="programs-grid">
+    <div class="program-card pc-green fade-up">
+      <div class="program-header">
+        <div class="program-icon pi-green">🌱</div>
+        <span class="program-level-badge plb-green">A1 – A2 · Başlangıç</span>
+      </div>
+      <div class="program-body">
+        <div class="program-name">Sıfırdan İngilizce</div>
+        <p class="program-desc">Hiç bilmeyenden akıcı konuşana. Temel kelime bilgisi, günlük konuşmalar ve basit cümle yapılarını kapsayan 24 haftalık yapılandırılmış program.</p>
+        <div class="program-meta">
+          <span>📅 24 Hafta</span>
+          <span>👥 Max 8 Kişi</span>
+          <span>⭐ 4.9</span>
+        </div>
+        <div class="program-footer">
+          <div>
+            <div class="program-price-num">₺2.400</div>
+            <div class="program-price-note">aylık · 3 gün/hafta</div>
+          </div>
+          <a href="#enroll" class="btn-enroll-dark">Kayıt Ol</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-card pc-orange fade-up">
+      <div class="program-header">
+        <div class="program-icon pi-orange">🗣️</div>
+        <span class="program-level-badge plb-orange">B1 – B2 · Orta</span>
+      </div>
+      <div class="program-body">
+        <div class="program-name">Speaking & Fluency</div>
+        <p class="program-desc">Güvenle iletişim kur. Karmaşık konular, iş yazışmaları ve akıcı konuşma becerilerine odaklanan yoğun konuşma programı.</p>
+        <div class="program-meta">
+          <span>📅 16 Hafta</span>
+          <span>👥 Max 6 Kişi</span>
+          <span>⭐ 4.8</span>
+        </div>
+        <div class="program-footer">
+          <div>
+            <div class="program-price-num">₺3.200</div>
+            <div class="program-price-note">aylık · 4 gün/hafta</div>
+          </div>
+          <a href="#enroll" class="btn-enroll-dark">Kayıt Ol</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-card pc-blue fade-up">
+      <div class="program-header">
+        <div class="program-icon pi-blue">💼</div>
+        <span class="program-level-badge plb-blue">Özel · İş İngilizcesi</span>
+      </div>
+      <div class="program-body">
+        <div class="program-name">Business English Pro</div>
+        <p class="program-desc">Kariyerini ilerlet. Toplantılar, müzakereler, iş yazışmaları ve sektör odaklı terminoloji için profesyonel dil becerileri.</p>
+        <div class="program-meta">
+          <span>📅 12 Hafta</span>
+          <span>👥 Max 5 Kişi</span>
+          <span>⭐ 4.9</span>
+        </div>
+        <div class="program-footer">
+          <div>
+            <div class="program-price-num">₺4.500</div>
+            <div class="program-price-note">aylık · 2 gün/hafta</div>
+          </div>
+          <a href="#enroll" class="btn-enroll-dark">Kayıt Ol</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-card pc-purple fade-up">
+      <div class="program-header">
+        <div class="program-icon pi-purple">🎯</div>
+        <span class="program-level-badge plb-purple">Sınav · IELTS / TOEFL</span>
+      </div>
+      <div class="program-body">
+        <div class="program-name">IELTS Yoğun Kamp</div>
+        <p class="program-desc">Hedef puanına ulaş. Sınav stratejileri, pratik testler ve kişisel koçluk ile 7+ band garantili 8 haftalık yoğun program.</p>
+        <div class="program-meta">
+          <span>📅 8 Hafta</span>
+          <span>👥 Max 4 Kişi</span>
+          <span>⭐ 5.0</span>
+        </div>
+        <div class="program-footer">
+          <div>
+            <div class="program-price-num">₺5.800</div>
+            <div class="program-price-note">toplam · 5 gün/hafta</div>
+          </div>
+          <a href="#enroll" class="btn-enroll-dark">Kayıt Ol</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="program-card pc-gold fade-up">
+      <div class="program-header">
+        <div class="program-icon pi-gold">✨</div>
+        <span class="program-level-badge plb-gold">C1 – C2 · İleri</span>
+      </div>
+      <div class="program-body">
+        <div class="program-name">Advanced Mastery</div>
+        <p class="program-desc">Anadil konuşanlar gibi ifade et. Akademik yazım, tartışma teknikleri ve nüanslı dil kullanımını mükemmelleştir.</p>
+        <div class="program-meta">
+          <span>📅 20 Hafta</span>
+          <span>👥 Max 6 Kişi</span>
+          <span>⭐ 4.9</span>
+        </div>
+        <div class="program-footer">
+          <div>
+            <div class="program-price-num">₺3.800</div>
+            <div class="program-price-note">aylık · 3 gün/hafta</div>
+          </div>
+          <a href="#enroll" class="btn-enroll-dark">Kayıt Ol</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHERS -->
+<section class="teachers" id="teachers">
+  <div class="section-tag">Eğitmen Kadrosu</div>
+  <h2 class="section-title">Uzman eğitmenler,<br>gerçek deneyim.</h2>
+  <p class="section-sub">Native speaker ve uluslararası sertifikalı eğitmenlerimizle öğrenmek bambaşka bir deneyim.</p>
+
+  <div class="teachers-grid">
+    <div class="teacher-card fade-up">
+      <div class="teacher-avatar av-teal">SE</div>
+      <div class="teacher-name">Sarah Evans</div>
+      <div class="teacher-role">Head of English</div>
+      <p class="teacher-bio">Cambridge mezunu. CELTA & DELTA sertifikalı. 15 yıllık öğretmenlik deneyimi.</p>
+    </div>
+    <div class="teacher-card fade-up">
+      <div class="teacher-avatar av-orange">JM</div>
+      <div class="teacher-name">James Mitchell</div>
+      <div class="teacher-role">Business English</div>
+      <p class="teacher-bio">MBA sahibi. Wall Street deneyimiyle iş dünyasına özel dil koçluğu yapıyor.</p>
+    </div>
+    <div class="teacher-card fade-up">
+      <div class="teacher-avatar av-purple">LC</div>
+      <div class="teacher-name">Laura Chen</div>
+      <div class="teacher-role">IELTS Uzmanı</div>
+      <p class="teacher-bio">IELTS 9.0 puanlı. Öğrencilerinin %95'i hedef puanlarına ulaşıyor.</p>
+    </div>
+    <div class="teacher-card fade-up">
+      <div class="teacher-avatar av-gold">AY</div>
+      <div class="teacher-name">Ahmet Yıldız</div>
+      <div class="teacher-role">Başlangıç Programları</div>
+      <p class="teacher-bio">Oxford'da eğitim almış. Türk öğrenciler için özel metodoloji geliştirdi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="section-tag">Öğrenci Yorumları</div>
+  <h2 class="section-title">Öğrencilerimiz<br>ne diyor?</h2>
+  <p class="section-sub">3200'den fazla mezun öğrencimizin deneyimleri.</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial fade-up">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"IELTS sınavında 7.5 aldım! Laura'nın metodolojisi gerçekten işe yarıyor. 3 ayda inanılmaz ilerleme kaydettim."</p>
+      <div class="testimonial-author">
+        <div class="author-dot" style="background: linear-gradient(135deg, #1e7a6e, #2aa89a);">EK</div>
+        <div>
+          <div class="author-name">Elif Kaya</div>
+          <div class="author-info">IELTS 7.5</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial fade-up">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Business English kursu kariyerimi dönüştürdü. Artık yabancı ortaklarla rahatlıkla toplantı yapabiliyorum."</p>
+      <div class="testimonial-author">
+        <div class="author-dot" style="background: linear-gradient(135deg, #5b30b8, #8a60e0);">MA</div>
+        <div>
+          <div class="author-name">Mehmet Arslan</div>
+          <div class="author-info">Yazılım Müdürü</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial fade-up">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Sıfırdan başladım, 6 ayda B2 seviyesine ulaştım. Küçük sınıflar sayesinde her derse kişisel ilgi gösterildi."</p>
+      <div class="testimonial-author">
+        <div class="author-dot" style="background: linear-gradient(135deg, #d4622a, #e88a5a);">ZD</div>
+        <div>
+          <div class="author-name">Zeynep Demir</div>
+          <div class="author-info">B2 Sertifikası</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-tag">Sık Sorulan Sorular</div>
+  <h2 class="section-title">Aklınızdaki<br>sorular.</h2>
+
+  <div class="faq-list">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Başlamadan önce seviye testi yapıyor musunuz?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Evet, kayıt öncesinde ücretsiz online seviye testimiz bulunuyor. Test sonucuna göre size en uygun kursa yönlendiriyoruz. Dilersen ücretsiz deneme dersine de katılabilirsin.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Dersler yüz yüze mi online mı?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Her iki seçeneği de sunuyoruz. Merkezimizde yüz yüze ya da canlı online derslerle esnek bir öğrenme deneyimi yaşayabilirsin.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Kayıt ücreti var mı? İptal politikası nedir?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Kayıt ücreti yoktur. İlk dersten itibaren 14 gün içinde herhangi bir gerekçe göstermeden iptal edebilir, ödediğin ücretin tamamını geri alabilirsin.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Kurs bitince sertifika veriyor musunuz?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Evet, kurs tamamlandığında uluslararası geçerliliği olan LinguaEdge tamamlama sertifikası veriyoruz. IELTS/TOEFL kurslarında ise sınav başvuru desteği de sağlıyoruz.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">
+        Sınıf boyutu ne kadar?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Maksimum 8 kişilik küçük sınıflarla çalışıyoruz. Bu sayede her öğrenciye kişisel ilgi gösterilebiliyor ve hızlı ilerleme sağlanıyor.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner" id="enroll">
+  <div class="section-tag" style="color:var(--gold)">Hemen Başla</div>
+  <h2 class="section-title">Ücretsiz deneme dersin<br>seni bekliyor.</h2>
+  <p class="section-sub">Kredi kartı gerekmez. İptal etmek kolay. Sadece gel ve gör.</p>
+  <a href="tel:+902321234567" class="btn-primary" style="font-size:1rem; padding: 1rem 2.5rem;">
+    Şimdi Ara: 0232 123 45 67 →
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="logo">Lingua<span style="color:var(--accent)">Edge</span></a>
+  <div class="footer-links">
+    <a href="#courses">Programlar</a>
+    <a href="#teachers">Eğitmenler</a>
+    <a href="#faq">SSS</a>
+    <a href="#enroll">İletişim</a>
+  </div>
+  <div style="font-size:0.78rem;">© 2025 LinguaEdge.</div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  el.classList.toggle('open');
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 100);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
