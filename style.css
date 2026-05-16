@@ -1,9 +1,10 @@
 
 
 .navbar{
-    background-color: #c6c190;
+    background-color: #cacd9b;
 }
-#marka{
+
+.marka{
 
   font-family: "Playfair Display", serif; /* şimdilik sadece marka başlığına font family verdim*/
 }

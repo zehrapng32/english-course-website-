@@ -23,19 +23,21 @@
 
 <div class="container">
 
-<a  class="navbar-brand  navbar-expand-lg fw-normal border border-2 border-light" href="anasayfa.html"><h4 id="marka">
+<a  class="navbar-brand  navbar-expand-lg fw-normal border border-2 border-light" href="anasayfa.html"><h4 class="marka">
   <div class="container">LEARN ENGLISH</div></h4></a>
 
 
 <!--3 satır şey için div açtık -->
 
 
-<div class="d-flex gap-5 align-items-center">
-      <a href="#programlar" class="nav-link" > <i class="bi bi-check2-circle"></i>Programlar</a>
-      <a href="#eğitmenler"   class="nav-link" > <i class="bi bi-check2-circle"></i>Eğitmenler</a>
-      <a href="#faq"   class="nav-link" > <i class="bi bi-check2-circle"></i>SSS</a>
+<div class="d-flex gap-5 align-items-center ">
+      <a href="#programlar"   class="nav-link mx-3" > <i class="bi bi-check2-circle"></i> <span id="programText">Programlar</span></a>
+      <a href="#eğitmenler"  class="nav-link mx-3" > <i class="bi bi-check2-circle"></i>  <span id="teacherText">Eğitmenler</span>
+</a>
+      <a href="#faq"   class="nav-link mx-3" > <i class="bi bi-check2-circle"></i>  <span id="sssText">SSS</span>
+</a>
 
-      <a href="form.html" class="btn btn-light rounded-pill ms-3" id="signup">Kayıt Ol</a>
+      <a href="form.html"  class="btn btn-light rounded-pill ms-3" id="signup">Kayıt Ol</a>
 
       <!--ingilizce switch butonu -->
       <div class="form-check form-switch ms-3">
@@ -106,9 +108,9 @@
 
 <div class="container" id="programlar" >
   
-<h2 id="marka"   class="section-title text-center mb-5 ">
-      Programlar
-    </h2>
+<h2 id="BaslikProgramlar" class="section-title text-center mb-5 my-5 marka">
+      Kurslarımız
+    </h2> <hr>
 <div class="container text-center p-5 my-5 ">
   <div class="row">
     <div class="col">
@@ -186,7 +188,7 @@
 <section id="eğitmenler" class="teachers py-5 mt-5 mb-5 full-section ">
   <div class="container-fluid">
 
-    <h3 id="marka" class="text-center mb-5 ">Eğitmenlerimiz</h3>
+    <h3 id="eğitmenlerBaslik" class="text-center mb-5 marka ">Eğitmenlerimiz</h3>
 
     <div class="row text-center ">
 
@@ -224,7 +226,7 @@
 <section class="faq py-5  " id="faq" style="height:600px">
   <div class="container">
 
-    <h2 id="marka"   class="section-title text-center mb-5">
+    <h2  id="FAQ" class="section-title text-center mb-5 marka ">
       Aklınızdaki sorular
     </h2>
 
@@ -232,8 +234,9 @@
 
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#questionOne">
+          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#questionOne" >
             Başlamadan önce seviye testi yapıyor musunuz?
+            
           </button>
         </h2>
         <div id="questionOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
@@ -322,7 +325,7 @@
 
       
       <div class="col-md-4 mb-3">
-        <h5>Şubelerimiz</h5>
+        <h5 id="şubeler">Şubelerimiz</h5>
         <br>
         <ul class="list-unstyled">
           <li>📍 İstanbul - Pendik</li>
@@ -333,7 +336,7 @@
 
      
       <div class="col-md-4 mb-3">
-        <h5>İletişim</h5>
+        <h5 id="contact">İletişim</h5>
         <p>📞 0555 555 55 55</p>
         <p>✉️ learnenglish@gmail.com</p>
       </div>
