@@ -24,11 +24,13 @@ This project was created to improve my front-end development skills and build re
 
 ## Screenshots 
 
-<img width="1919" height="940" alt="image" src="https://github.com/user-attachments/assets/1b55e492-5b7d-439d-a851-67f701a5f704" />
-<img width="1903" height="920" alt="image" src="https://github.com/user-attachments/assets/6e6cf0e5-6858-4cbb-a394-33741d5b844d" />
-<img width="1919" height="930" alt="image" src="https://github.com/user-attachments/assets/2533974d-6b0b-4555-a578-d1fba39b1238" />
-<img width="1919" height="982" alt="image" src="https://github.com/user-attachments/assets/82a17d0d-66e1-4822-8796-aaa33431d1d4" />
-<img width="1876" height="1001" alt="image" src="https://github.com/user-attachments/assets/08426a74-1793-4156-8e91-f3602ca7f2ab" />
+<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/b6ccf57e-9e0c-4f5b-8509-c97cad75d132" />
+<img width="1905" height="985" alt="image" src="https://github.com/user-attachments/assets/794de280-98b7-4c9b-8da4-d3923b2ca1ac" />
+<img width="1918" height="1025" alt="image" src="https://github.com/user-attachments/assets/42ecc8be-bb0d-4523-87e2-40e6f6efcbd7" />
+<img width="1885" height="955" alt="image" src="https://github.com/user-attachments/assets/d70199de-d11f-4fd6-b6b7-25b7c7d872ae" />
+<img width="1918" height="1015" alt="image" src="https://github.com/user-attachments/assets/db1c9a6a-e9a6-4cbc-8d67-9e3397ea5743" />
+
+
 
 
 
