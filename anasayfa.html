@@ -2,369 +2,530 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>learnenglish</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"> <!--bootstrapin icon kütüphanesi cdn i yukarıdaki css için-->
-    <!-- css için bootstrap cdn i -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>learnenglish</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!--bootstrapin icon kütüphanesi cdn i yukarıdaki css için-->
+  <!-- css için bootstrap cdn i -->
 
 
-    <!-- google font tipi için link -->
+  <!-- google font tipi için link -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 
-    <nav class="navbar  py-4">
+  <nav class="navbar  py-4">
 
-<div class="container">
+    <div class="container">
 
-<a  class="navbar-brand  navbar-expand-lg fw-normal border border-2 border-light" href="anasayfa.html"><h4 class="marka">
-  <div class="container">LEARN ENGLISH</div></h4></a>
-
-
-<!--3 satır şey için div açtık -->
-
-
-<div class="d-flex gap-5 align-items-center ">
-      <a href="#programlar"   class="nav-link mx-3" > <i class="bi bi-check2-circle"></i> <span id="programText">Programlar</span></a>
-      <a href="#eğitmenler"  class="nav-link mx-3" > <i class="bi bi-check2-circle"></i>  <span id="teacherText">Eğitmenler</span>
-</a>
-      <a href="#faq"   class="nav-link mx-3" > <i class="bi bi-check2-circle"></i>  <span id="sssText">SSS</span>
-</a>
-
-      <a href="form.html"  class="btn btn-light rounded-pill ms-3" id="signup">Kayıt Ol</a>
-
-      <!--ingilizce switch butonu -->
-      <div class="form-check form-switch ms-3">
-  <input class="form-check-input" type="checkbox" id="languageSwitch" style="cursor: pointer;">
-  <label class="form-check-label" for="languageSwitch" id="langLabel">EN</label> 
-</div>
-    </div>
-
-</div>
-
-    </nav>
+      <a class="navbar-brand  navbar-expand-lg fw-normal border  border-2 border-light" href="anasayfa.html">
+        <h4 class="marka">
+          <div class="container"><i class="bi bi-bell"></i> LEARN ENGLISH</div>
+        </h4>
+      </a>
 
 
-
-<!--slider bölümü-->
-<section class="slider-section">
+      <!--3 satır şey için div açtık -->
 
 
-  <div id="carouselExampleCaptions" class="carousel slide mt-5 p-5"  data-bs-ride="carousel" data-bs-interval="3000"> <!--bu özellik hızını ayarlıyor data bs interval ve otomatik hareket ettiriyor -->
-  <div class="carousel-indicators ">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="kurs foto1.jpg" class="d-block w-100" alt="resim bulunamadı">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>IELTS’e Hazır mısın?</h5>
-        <p>Uzman eğitmenlerle hedeflediğin skora ulaş</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="kurs foto2.png" class="d-block w-100" alt="resim bulunamadı">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Profesyonel Eğitimle İngilizceyi Öğren</h5>
-        <p>Güncel kaynaklar, yardımcı kitaplar ve konuşma odaklı dersler</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <a href="form.html"><img src="kurs foto3.png" class="d-block w-100"  alt="resim bulunamadı"></a>
-      <div class="carousel-caption d-none d-md-block">
-       <a href="form.html " target="_blank"><h5>Fırsatı Kaçırma, Hemen Başla</h5></a> <!--başka sayfada açılması için target ekledik-->
-       <a href="form.html"><p>%20 indirim fırsatıyla hemen aramıza katıl</p></a> 
-      </div>
-    </div>
-   
-  </div>   <!--bu oklar aşağı eklenmesine ragmen nasıl uste cıkıyor -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+      <div class="d-flex gap-5 align-items-center ">
+        <a href="#programlar" class="nav-link mx-3"> <i class="bi bi-check2-circle"></i> <span data-tr="Kurslar"
+            data-en="Courses">Kurslar</span></a>
+        <a href="#eğitmenler" class="nav-link mx-3"> <i class="bi bi-check2-circle"></i> <span data-tr="Eğitmenler"
+            data-en="Instructors">Eğitmenler</span>
+        </a>
+        <a href="#faq" class="nav-link mx-3"> <i class="bi bi-check2-circle"></i> <span data-tr="SSS"
+            data-en="FAQ">SSS</span>
+        </a>
 
-</section>
+        <a href="form.html" class="btn btn-dark rounded-pill ms-3" id="signup"> <span data-tr="Kayıt Ol"
+            data-en="Sign Up">Kayıt Ol</span></a>
 
-
-
-
-
-<!--programlar bölümü -->  <!--bootstrap classa shadow eklersen direkt gölgelendirir border çeker -->
-
-
-
-<div class="container" id="programlar" >
-  
-<h2 id="BaslikProgramlar" class="section-title text-center mb-5 my-5 marka">
-      Kurslarımız
-    </h2> <hr>
-<div class="container text-center p-5 my-5 ">
-  <div class="row">
-    <div class="col">
-     <div class="card shadow" style="width: 18rem;" onclick="openImage('program1.png')"><!--onclick ekledik en altta body kapanmadan overlay foto var div içinde bir de css ve js kodu var incele bir de neden bu dive onclick ekledik başka div değil -->
-  <img src="program1.png" class="card-img-top" alt="resim bulunamadı">
-  <div class="card-body">
-    <p class="card-text"><h6>Beginner Level (A1–A2)</h6>   <i class="bi bi-check2-circle"></i>Günlük konuşma pratiği <br> <i class="bi bi-check2-circle"></i>Sıfırdan sağlam temel</p>
-  </div>
-</div>
-    </div>
-    <div class="col">
-      <div class="card shadow" style="width: 18rem;" onclick="openImage('program2.png')">
-  <img src="program2.png" class="card-img-top" alt="resim bulunamadı">
-  <div class="card-body">
-    <p class="card-text"><h6>Intermediate Level (B1–B2)</h6> <i class="bi bi-check2-circle"></i>Akıcı konuşma geliştirme <br><i class="bi bi-check2-circle"></i>Günlük ve iş İngilizcesi </p>
-  </div>
-</div>
-    </div>
-    <div class="col">
-      <div class="card shadow " style="width: 18rem;" onclick="openImage('program3.png')">
-  <img src="program3.png" class="card-img-top" alt="resim bulunamadı ">
-  <div class="card-body">
-    <p class="card-text"> <h6>Advanced Level (C1–C2)</h6> <i class="bi bi-check2-circle"></i>Akademik İngilizce kullanımı <br><i class="bi bi-check2-circle"></i>
-   İleri seviye konuşma pratiği </p>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-
-<div class="container text-center p-5  ">
-  <div class="row">
-    <div class="col-md-4 d-flex">
-     <div class="card shadow" style="width: 18rem;" onclick="openImage('ielts.png')"  >
-  <img src="ielts.png" class="card-img-top" alt="resim bulunamadı">
-  <div class="card-body">
-    <p class="card-text"> <h6>IELTS Kampı</h6> <i class="bi bi-check2-circle"></i>Hedef skor odaklı eğitim <br> <i class="bi bi-check2-circle"></i>Deneme sınavları ve analiz </p>
-</div>
-
-</div>
-    </div>
-    <div class="col-md-4 d-flex">
-      <div class="card shadow" style="width: 18rem;" onclick="openImage('speakıng-club.png')">
-  <img src="speakıng-club.png" class="card-img-top" alt="resim bulunamadı">
-  <div class="card-body">
-    <p class="card-text"> <h6>Speaking Club</h6> <i class="bi bi-check2-circle"></i>Native eğitmenlerle pratik <br> 
-     <i class="bi bi-check2-circle"></i> Kısa sürede akıcılık kazanma
-
-      
-    </p>
-
-
-  </div>
-</div>
-    </div>
-    <div class="col-md-4 d-flex">
-
-<div class="card shadow" style="width: 18rem;" onclick="openImage('app.png')">
-  <img src="app.png" class="card-img-top" alt="resim bulunamadı">
-  <div class="card-body">
-    <h6 class="card-title">Mobil Uygulama</h6>
-    <p class="card-text"><i class="bi bi-check2-circle"></i>Online ders ve materyaller <br> <i class="bi bi-check2-circle"></i>Sürekli öğrenme fırsatı</p>
-    <a href="https://www.apple.com/app-store/" target="_blank" class="btn btn-primary">Hemen İndir </a>
-  </div>
-</div>
-
-    </div>
-   
-</div>
- 
-</div>
-
-<!--eğitmenlerimiz bölümü-->
-
-<section id="eğitmenler" class="teachers py-5 mt-5 mb-5 full-section ">
-  <div class="container-fluid">
-
-    <h3 id="eğitmenlerBaslik" class="text-center mb-5 marka ">Eğitmenlerimiz</h3>
-
-    <div class="row text-center ">
-
-      <div class="col-md-4 mb-5">
-        <img src="Teacher1.png" class="teacher-img">
-        <h6 class="mt-2 mb-0">Kardelen Balcı</h6>
-        <small>IELTS Instructor</small>
-        <small class="d-block">kardelenbalci@gmail.com</small>
-      </div>
-
-      <div class="col-md-4">
-        <img src="Teacher2.png" class="teacher-img">
-        <h6 class="mt-2 mb-0">Tom Carter</h6>
-                <small>Speaking Instructor</small> <!--small tagı yazıyı arka planda gösterir -->
-                <small class="d-block">tomcarter@outlook.com</small>
-
-      </div>
-
-      <div class="col-md-4">
-        <img src="Teacher3.png" class="teacher-img">
-        <h6 class="mt-2 mb-0">Emily Jordan </h6>
-        <small>Speaking Instructor</small>
-        <small class="d-block">emilyjordan@gmail.com</small>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- sss kısmı -->
-
-
-<section class="faq py-5  " id="faq" style="height:600px">
-  <div class="container">
-
-    <h2  id="FAQ" class="section-title text-center mb-5 marka ">
-      Aklınızdaki sorular
-    </h2>
-
-    <div class="accordion" id="faqAccordion">
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#questionOne" >
-            Başlamadan önce seviye testi yapıyor musunuz?
-            
-          </button>
-        </h2>
-        <div id="questionOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Evet, kayıt öncesinde ücretsiz online seviye testimiz bulunuyor. Test sonucuna göre size en uygun kursa yönlendiriyoruz. Dilersen ücretsiz deneme dersine de katılabilirsin.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionTwo">
-            Dersler yüz yüze mi online mı?
-          </button>
-        </h2>
-        <div id="questionTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Her iki seçeneği de sunuyoruz. Merkezimizde yüz yüze ya da canlı online derslerle esnek bir öğrenme deneyimi yaşayabilirsin.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionThree">
-            Kayıt ücreti var mı? İptal politikası nedir?
-          </button>
-        </h2>
-        <div id="questionThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Kayıt ücreti yoktur. İlk dersten itibaren 14 gün içinde herhangi bir gerekçe göstermeden iptal edebilir, ödediğin ücretin tamamını geri alabilirsin.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionFour">
-            Kurs bitince sertifika veriyor musunuz?
-          </button>
-        </h2>
-        <div id="questionFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Evet, kurs tamamlandığında uluslararası geçerliliği olan LearnEnglish tamamlama sertifikası veriyoruz. IELTS/TOEFL kurslarında ise sınav başvuru desteği de sağlıyoruz.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questionFive">
-            Sınıf boyutu ne kadar?
-          </button>
-        </h2>
-        <div id="questionFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Maksimum 8 kişilik küçük sınıflarla çalışıyoruz. Bu sayede her öğrenciye kişisel ilgi gösterilebiliyor ve hızlı ilerleme sağlanıyor.
-          </div>
+        <!--ingilizce switch butonu -->
+        <div class="form-check form-switch ms-3">
+          <input class="form-check-input" type="checkbox" id="languageSwitch" style="cursor: pointer;">
+          <label class="form-check-label" for="languageSwitch" id="langLabel">EN</label>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
 
-
-<a href="https://wa.me/090000000" target="_blank" class="whatsapp-btn">
-  <i class="bi bi-whatsapp"></i>
-</a>
+  </nav>
 
 
 
+  <!--slider ve yazı-->
 
-<footer class="bg-dark text-light pt-4 mt-5 w-100 container-fluid">
-  <div>
-    
-  </div>
-  <div class="container-fluid text-center text-md-start ">
+  <div class="container text-center">
     <div class="row">
-                                     <!--grid maantıgı kullanmıs -->
-      
-      <div class="col-md-4 mb-3 ">
-        <h5>Learn English</h5>
-        <p>İngilizceyi profesyonel eğitmenlerle öğrenin.</p>
-      </div>
+      <div class="col-6">
+        <section class="slider-section">
 
-      
-      <div class="col-md-4 mb-3">
-        <h5 id="şubeler">Şubelerimiz</h5>
-        <br>
-        <ul class="list-unstyled">
-          <li>📍 İstanbul - Pendik</li>
-          <li>📍 Ankara - Çankaya</li>
-         
-        </ul>
-      </div>
 
-     
-      <div class="col-md-4 mb-3">
-        <h5 id="contact">İletişim</h5>
-        <p>📞 0555 555 55 55</p>
-        <p>✉️ learnenglish@gmail.com</p>
+          <div id="carouselExampleCaptions" class="carousel slide mt-5 p-5" data-bs-ride="carousel"
+            data-bs-interval="3000"> <!--bu özellik hızını ayarlıyor data bs interval ve otomatik hareket ettiriyor -->
+            <div class="carousel-indicators ">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="kurs foto1.jpg" class="d-block w-100" alt="resim bulunamadı">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5> <span data-tr="IELTS’e Hazır mısın?" data-en="Are you ready for IELTS">IELTS’e Hazır
+                      mısın?</span></h5>
+                  <p> <span data-tr="Uzman eğitmenlerle hedeflediğin skora ulaş"
+                      data-en="Reach your target score with expert instructors.">Uzman eğitmenlerle hedeflediğin skora
+                      ulaş</span>
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="kurs foto2.png" class="d-block w-100" alt="resim bulunamadı">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5> <span data-tr="Profesyonel Eğitimle İngilizceyi Öğren"
+                      data-en="Learn English with Professional Instructors">Profesyonel Eğitimle İngilizceyi
+                      Öğren</span>
+                  </h5>
+                  <p> <span data-tr="Güncel kaynaklar, yardımcı kitaplar ve konuşma odaklı dersler"
+                      data-en="Lessons focused on speaking, supported by up-to-date resources and learning materials.">Güncel
+                      kaynaklar, yardımcı kitaplar ve konuşma odaklı dersler</span>
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="form.html"><img src="kurs foto3.png" class="d-block w-100" alt="resim bulunamadı"></a>
+                <div class="carousel-caption d-none d-md-block">
+                  <a href="form.html " target="_blank">
+                    <h5> <span data-tr="Fırsatı Kaçırma, Hemen Başla"
+                        data-en="Don't Miss This Opportunity, Start Today">Fırsatı Kaçırma, Hemen Başla</span>
+                    </h5>
+                  </a> <!--başka sayfada açılması için target ekledik-->
+                  <a href="form.html"> <span data-tr="%20 indirim fırsatıyla hemen aramıza katıl"
+                      data-en="Get 20% off and join our community today.">%20 indirim fırsatıyla hemen aramıza
+                      katıl</span>
+                  </a>
+                </div>
+              </div>
+
+            </div> <!--bu oklar aşağı eklenmesine ragmen nasıl uste cıkıyor -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+        </section>
+
+
+
+
+      </div>
+      <div class="col-6">
+        <div id="introcard" class="card border-0 shadow p-3 ">
+          <div class="card-body">
+            <h2 class="card-title marka "><i class="bi bi-chat-square-quote"></i> <span
+                data-tr="İngilizce Öğrenmenin En Etkili Yolu"
+                data-en="The Most Effective Way to Learn English">İngilizce Öğrenmenin En Etkili Yolu</span><i
+                class="bi bi-chat-square-quote"></i></h2>
+
+            <p class="card-text ">
+              <span data-tr="      Uzman eğitmenlerle konuşma, dinleme, yazma ve okuma becerilerini geliştir.
+" data-en="Improve your speaking, listening, writing, and reading skills with expert instructors."> Uzman eğitmenlerle
+                konuşma, dinleme, yazma ve okuma becerilerini geliştir.
+              </span>
+            </p>
+
+            <ul class="list-unstyled">
+              <li><i class="bi bi-award"></i> <span data-tr="Birebir online dersler" data-en="One-on-one online lessons
+
+">Birebir online dersler</span>
+              </li>
+              <li><i class="bi bi-award"></i> <span data-tr="IELTS,TOEFL sınavlarına hazırlık" data-en="IELTS and TOEFL exam preparation
+">IELTS,TOEFL sınavlarına hazırlık</span>
+              </li>
+              <li><i class="bi bi-award"></i> <span data-tr="Konuşma kulüplerine üyelik"
+                  data-en="Access to speaking clubs">Konuşma kulüplerine üyelik</span>
+              </li>
+            </ul>
+
+            <p class="card-text">
+              <i class="bi bi-check2-square"></i> <strong> <span data-tr="5000+ öğrenci hedeflerine ulaştı"
+                  data-en="Helped over 5,000 students achieve their goals">5000+ öğrenci hedeflerine ulaştı</span>
+              </strong>
+            </p>
+
+            <a href="form.html" class="btn btn-success rounded-pill">
+              <span data-tr=" Ücretsiz Deneme Dersi
+" data-en="Free  Trial  Lesson"> Ücretsiz Deneme Dersi
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 
-  
-  <div class="text-center p-3 "> <!--ayrı divde araya çizgi cekmek istersek border top yapabiliriz bu div için -->
-    © 2026 Tüm Hakları Saklıdır | Designed by Zehra Nur
+
+
+
+
+
+
+
+  <!--programlar bölümü --> <!--bootstrap classa shadow eklersen direkt gölgelendirir border çeker -->
+
+
+
+  <div class="container" id="programlar">
+
+    <h2 id="BaslikProgramlar" class="section-title text-center mb-5 my-5 marka">
+      <i class="bi bi-joystick"></i> <span data-tr="Kurslarımız" data-en="Courses">Kurslarımız</span>
+
+    </h2>
+    <hr>
+    <div class="container text-center p-5 my-5 ">
+      <div class="row">
+        <div class="col">
+          <div class="card shadow" style="width: 18rem;" onclick="openImage('program1.png')">
+            <!--onclick ekledik en altta body kapanmadan overlay foto var div içinde bir de css ve js kodu var incele bir de neden bu dive onclick ekledik başka div değil -->
+            <img src="program1.png" class="card-img-top" alt="resim bulunamadı">
+            <div class="card-body">
+              <p class="card-text">
+              <h6>Beginner Level (A1–A2)</h6> <i class="bi bi-check2-circle"></i> <span data-tr="Günlük konuşma pratiği " data-en="Daily speaking practice">Günlük konuşma pratiği </span>
+<br> <i
+                class="bi bi-check2-circle"></i> <span data-tr="Sıfırdan sağlam temel" data-en="Strong foundation from scratch">Sıfırdan sağlam temel</span>
+</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow" style="width: 18rem;" onclick="openImage('program2.png')">
+            <img src="program2.png" class="card-img-top" alt="resim bulunamadı">
+            <div class="card-body">
+              <p class="card-text">
+              <h6>Intermediate Level (B1–B2)</h6> <i class="bi bi-check2-circle"></i>  <span data-tr="Akıcı konuşma geliştirme" data-en="Improve speaking fluency">Akıcı konuşma geliştirme</span>
+ <br><i
+                class="bi bi-check2-circle"></i>  <span data-tr="Günlük ve iş İngilizcesi" data-en="Everyday and business English">Günlük ve iş İngilizcesi</span>
+ </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow " style="width: 18rem;" onclick="openImage('program3.png')">
+            <img src="program3.png" class="card-img-top" alt="resim bulunamadı ">
+            <div class="card-body">
+              <p class="card-text">
+              <h6>Advanced Level (C1–C2)</h6> <i class="bi bi-check2-circle"></i>  <span data-tr="Akademik İngilizce kullanımı" data-en="Academic English skills
+">Akademik İngilizce kullanımı</span>
+ <br><i
+                class="bi bi-check2-circle"></i>
+               <span data-tr="İleri seviye konuşma pratiği" data-en="Advanced speaking practice">İleri seviye konuşma pratiği</span>
+ </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center p-5  ">
+      <div class="row">
+        <div class="col-md-4 d-flex">
+          <div class="card shadow" style="width: 18rem;" onclick="openImage('ielts.png')">
+            <img src="ielts.png" class="card-img-top" alt="resim bulunamadı">
+            <div class="card-body">
+              <p class="card-text">
+              <h6> <span data-tr="IELTS Kampı" data-en="IELTS Camp">IELTS Kampı</span>
+</h6> <i class="bi bi-check2-circle"></i>  <span data-tr="Hedef skor odaklı eğitim" data-en="Target score-focused preparation">Hedef skor odaklı eğitim</span>
+ <br> <i
+                class="bi bi-check2-circle"></i>  <span data-tr="Deneme sınavları ve analiz" data-en="Practice tests and performance analysis">Deneme sınavları ve analiz </span>
+</p>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card shadow" style="width: 18rem;" onclick="openImage('speakıng-club.png')">
+            <img src="speakıng-club.png" class="card-img-top" alt="resim bulunamadı">
+            <div class="card-body">
+              <p class="card-text">
+              <h6>Speaking Club</h6> <i class="bi bi-check2-circle"></i>  <span data-tr="Native eğitmenlerle pratik" data-en="Practice with native instructors">Native eğitmenlerle pratik</span>
+ <br>
+              <i class="bi bi-check2-circle"></i> <span data-tr="Kısa sürede akıcılık kazanma" data-en="Improve fluency in a short time">Kısa sürede akıcılık kazanma</span>
+ 
+
+
+              </p>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+
+          <div class="card shadow" style="width: 18rem;" onclick="openImage('app.png')">
+            <img src="app.png" class="card-img-top" alt="resim bulunamadı">
+            <div class="card-body">
+              <h5 class="card-title"> <span data-tr="Mobil Uygulama" data-en="Mobile App">Mobil Uygulama</span>
+</h5>
+              <p class="card-text"><i class="bi bi-check2-circle"></i> <span data-tr="Online ders ve materyaller" data-en="Online lessons and learning materials">Online ders ve materyaller</span>
+ <br> <i
+                  class="bi bi-check2-circle"></i> <span data-tr="Sürekli öğrenme fırsatı" data-en="Learn continuously wherever you are">Sürekli öğrenme fırsatı</span>
+</p>
+              <a href="https://www.apple.com/app-store/" target="_blank" class="btn btn-primary">  <span data-tr="Hemen İndir" data-en="Download Now">Hemen İndir</span>
+ </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--eğitmenlerimiz bölümü-->
+
+    <section id="eğitmenler" class="teachers py-5 mt-5 mb-5 full-section ">
+      <div class="container-fluid">
+
+        <h3 id="eğitmenlerBaslik" class="text-center mb-5 marka "> <i class="bi bi-balloon-heart"></i> <span
+            data-tr="Eğitmenlerimiz" data-en="Instructors">Eğitmenlerimiz</span>
+        </h3>
+
+        <div class="row text-center ">
+
+          <div class="col-md-4 mb-5">
+            <img src="Teacher1.png" class="teacher-img">
+            <h6 class="mt-2 mb-0">Kardelen Balcı</h6>
+            <small>IELTS Instructor</small>
+            <a href="mailto:kardelenbalci@gmail.com" style="text-decoration: none;"><small
+                class="d-block">kardelenbalci@gmail.com</small></a>
+          </div>
+
+          <div class="col-md-4">
+            <img src="Teacher2.png" class="teacher-img">
+            <h6 class="mt-2 mb-0">Tom Carter</h6>
+            <small>Speaking Instructor</small> <!--small tagı yazıyı arka planda gösterir -->
+            <a href="mailto:tomcarter@outlook.com" style="text-decoration: none;"><small
+                class="d-block">tomcarter@outlook.com</small>
+            </a>
+
+          </div>
+
+          <div class="col-md-4">
+            <img src="Teacher3.png" class="teacher-img">
+            <h6 class="mt-2 mb-0">Emily Jordan </h6>
+            <small>Speaking Instructor</small>
+            <a href="mailto:emilyjordan@outlook.com" style="text-decoration: none;"><small
+                class="d-block">emilyjordan@outlook.com</small></a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- sss kısmı -->
+
+
+    <section class="faq py-5  " id="faq" style="height:600px">
+      <div class="container">
+
+        <h2 id="FAQ" class="section-title text-center mb-5 marka ">
+          <i class="bi bi-patch-question"></i> <span data-tr="Aklınızdaki Sorular" data-en="Frequently Asked Questions">Aklınızdaki sorular</span>
+          
+        </h2>
+
+        <div class="accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#questionOne">
+                <span data-tr=" Başlamadan önce seviye testi yapıyor musunuz?
+" data-en="Do you provide a placement test before enrollment?"> Başlamadan önce seviye testi yapıyor musunuz?
+                </span>
+
+              </button>
+            </h2>
+            <div id="questionOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <span data-tr="Evet, kayıt öncesinde ücretsiz online seviye testimiz bulunuyor. Test sonucuna göre size en uygun kursa yönlendiriyoruz. Dilersen ücretsiz deneme dersine de katılabilirsin.
+" data-en="Yes, we offer a free online placement test before enrollment. Based on your results, we recommend the most suitable course for your level. You can also join a free trial lesson if you wish.">Evet,
+                  kayıt öncesinde ücretsiz online seviye testimiz bulunuyor. Test sonucuna göre size en uygun kursa
+                  yönlendiriyoruz. Dilersen ücretsiz deneme dersine de katılabilirsin.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#questionTwo">
+                <span data-tr="Dersler yüz yüze mi online mı?" data-en="Are the lessons online or face-to-face?">Dersler yüz yüze mi online mı?</span>
+ 
+              </button>
+            </h2>
+            <div id="questionTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                 <span data-tr="Her iki seçeneği de sunuyoruz. Merkezimizde yüz yüze ya da canlı online derslerle esnek bir öğrenme
+                deneyimi yaşayabilirsin." data-en="We offer both online and face-to-face classes. You can choose the learning method that best suits your schedule and preferences.">Her iki seçeneği de sunuyoruz. Merkezimizde yüz yüze ya da canlı online derslerle esnek bir öğrenme
+                deneyimi yaşayabilirsin.</span>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#questionThree">
+                <span data-tr=" Is there a registration fee? What is your cancellation policy?
+" data-en="Is there a registration fee? What is your cancellation policy?"> Kayıt ücreti var mı? İptal politikası nedir?
+</span>
+              </button>
+            </h2>
+            <div id="questionThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                <span data-tr="Kayıt ücreti yoktur. İlk dersten itibaren 14 gün içinde herhangi bir gerekçe göstermeden iptal edebilir,
+                ödediğin ücretin tamamını geri alabilirsin." data-en="There is no hidden registration fee. For information about cancellations and refunds, please contact our support team.">Kayıt ücreti yoktur. İlk dersten itibaren 14 gün içinde herhangi bir gerekçe göstermeden iptal edebilir,
+                ödediğin ücretin tamamını geri alabilirsin.</span>
+ 
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#questionFour">
+                 <span data-tr="Kurs bitince sertifika veriyor musunuz?" data-en="Do you provide a certificate after course completion?">Kurs bitince sertifika veriyor musunuz?</span>
+
+              </button>
+            </h2>
+            <div id="questionFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                 <span data-tr="Evet, kurs tamamlandığında uluslararası geçerliliği olan LearnEnglish tamamlama sertifikası veriyoruz.
+                IELTS/TOEFL kurslarında ise sınav başvuru desteği de sağlıyoruz." data-en="Yes, students who successfully complete the course receive a certificate of completion.">Evet, kurs tamamlandığında uluslararası geçerliliği olan LearnEnglish tamamlama sertifikası veriyoruz.
+                IELTS/TOEFL kurslarında ise sınav başvuru desteği de sağlıyoruz.</span>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#questionFive">
+                 <span data-tr="Sınıf boyutu ne kadar?
+" data-en="What is the class size?">Sınıf boyutu ne kadar?
+</span>
+              </button>
+            </h2>
+            <div id="questionFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                 <span data-tr="Maksimum 8 kişilik küçük sınıflarla çalışıyoruz. Bu sayede her öğrenciye kişisel ilgi gösterilebiliyor
+                ve hızlı ilerleme sağlanıyor" data-en="Class sizes are kept small to ensure effective learning and active participation. The number of students may vary depending on the course.">Maksimum 8 kişilik küçük sınıflarla çalışıyoruz. Bu sayede her öğrenciye kişisel ilgi gösterilebiliyor
+                ve hızlı ilerleme sağlanıyor.</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
-</footer>
+  </section>
 
-<!--programlar bölümünde resme tıklayınca açılması için -->
-<div id="imageOverlay" onclick="closeImage()">
-  <img id="overlayImg">
-</div>
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <a href="https://wa.me/090000000" target="_blank" class="whatsapp-btn">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+
+
+
+  <footer class="container-fluid bg-dark text-light  w-100  ">
+    <div>
+
+    </div>
+    <div class="container-fluid text-center   ">
+      <div class="row">
+        <!--grid maantıgı kullanmıs -->
+
+        <div class="col-md-4 mt-3 ">
+          <h5><i class="bi bi-bell"></i> Learn English</h5>
+          <p> <span data-tr="İngilizceyi profesyonel eğitmenlerle öğrenin."
+              data-en="Learn English with professional instructors.">İngilizceyi profesyonel eğitmenlerle
+              öğrenin.</span>
+          </p>
+        </div>
+
+
+        <div class="col-md-4 mt-3">
+          <h5><span data-tr="Şubelerimiz" data-en="Our Branches">Şubelerimiz </span>
+          </h5>
+          <br>
+          <ul class="list-unstyled">
+            <li>📍 İstanbul - Pendik</li>
+            <li>📍 Ankara - Çankaya</li>
+
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 mt-3">
+          <h5><span data-tr="İletişim" data-en="Contact Us">İletişim</span></h5>
+
+          <p>📞 0555 555 55 55</p>
+          <p>✉️ learnenglish@gmail.com</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="text-center p-3 "> <!--ayrı divde araya çizgi cekmek istersek border top yapabiliriz bu div için -->
+      <span data-tr="© 2026 Tüm Hakları Saklıdır | Designed by Zehra Nur"
+        data-en="© 2026 All Rights Reserved | Designed by Zehra Nur">© 2026 Tüm Hakları Saklıdır | Designed by Zehra
+        Nur</span>
+
+    </div>
+  </footer>
+
+  <!--programlar bölümünde resme tıklayınca açılması için -->
+  <div id="imageOverlay" onclick="closeImage()">
+    <img id="overlayImg">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 
 
 
 </body>
+
 </html>
 
 
 
 <!-- en son mobile düşünce navbarın 3 tane yazısını metü butonuna dönüştürecek responsive özelliği yaz -->
-
-

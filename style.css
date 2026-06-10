@@ -1,7 +1,7 @@
 
 
 .navbar{
-    background-color: #cacd9b;
+    background-color: #d5dd9b;
 }
 
 .marka{
@@ -28,7 +28,7 @@
 }
 
 .carousel-item img {
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   object-position: left center; 
   border-radius: 20px;
@@ -64,6 +64,23 @@
   transition: 0.2s;  /* geçiş yumuşaklığı*/
 }
 
+
+#introcard{
+  background-color: #cbcba0;
+  border-radius: 50px;
+   margin: 90px;
+   
+}
+
+.card-title{
+
+  font-size: 23px;
+}
+
+
+
+/*  wp butonu */
+
 .whatsapp-btn {  /* css yazmasaydık a nın içine ikon koydugumuz için direkt en alta icon gelirdi link özelliğiyle */
   position: fixed;
   bottom: 30px;
@@ -89,7 +106,7 @@
 form{
 
   background-color: rgb(224, 224, 216);
- border-radius: 90px;
+ border-radius: 80px;
 
  
 }
@@ -98,13 +115,19 @@ form{
   color: rgb(21, 21, 0);
 }
 
+/* switch butonu default mavı degerini yenmek için csss ekledım yesile donsun dıye */
+.form-switch .form-check-input:checked {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+}
+
 /* form akan başlık bölümü*/
 .kayan-yazı{
   width: 100%;
   overflow: hidden;
-  background: #f8f9fa;
   white-space: nowrap;
   box-sizing: border-box;
+  padding: 10px;
 }
 
 .kayan-yazı p {
@@ -123,6 +146,11 @@ form{
   100% {
     transform: translateX(-100%);
   }
+}
+
+
+.kayan-yazı{
+  background-color: #cbcba0;
 }
 
 /* -100% → kendi genişliği kadar sola gider
@@ -164,4 +192,4 @@ small {
 }
 
 
-/* butona basınca renginin değişmesini ayarlayamadım ona bak */
+
